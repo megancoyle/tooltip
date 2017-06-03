@@ -11,7 +11,11 @@ $(document).ready(function(){
       $('#tooltip-container').html(newHTML);
     }
   }).mousemove(function(e){
+    var toolTipWidth = $('#tooltip-container').outerWidth();
+    var toolTipHeight = $('#tooltip-container').outerHeight();
 
+    $('#tooltip-container').css('left', (e.pageX - 20) + 'px');
+    $('#tooltip-container').css('top', (e.pageY + 20) + 'px')
   }).mouseout(function(e){
 
   });
