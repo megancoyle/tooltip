@@ -10,6 +10,9 @@ $(document).ready(function(){
       var newHTML = $(elementToGet).html();
       $('#tooltip-container').html(newHTML);
     }
+
+    $('#tooltip-container').css({'display': 'block', 'opacity':0}).animate({opacity:1}, 250);
+
   }).mousemove(function(e){
     var toolTipWidth = $('#tooltip-container').outerWidth();
     var toolTipHeight = $('#tooltip-container').outerHeight();
@@ -29,7 +32,9 @@ $(document).ready(function(){
     }
 
   }).mouseout(function(e){
-
+    $('#tooltip-container').animate({opacity:0}, 250, function() {
+      $('#tooltip-container').css('display', 'none').html('');
+    });
   });
 
 });
