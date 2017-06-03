@@ -3,4 +3,8 @@
 
 /* Rules for IE 7 & 8 */
 
-
+#tooltip-container {
+  width: 200px;
+  background: none;
+  background-image: url(../images/ie_transparency.png);
+}

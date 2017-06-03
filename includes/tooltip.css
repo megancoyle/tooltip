@@ -21,13 +21,14 @@ aside p { margin: 0px; }
 footer { border-top: 1px solid #ddd; margin: 0px; padding: 10px 25px 10px 10px; color: rgba(255,255,255,.4); }
 .clear { clear: both; line-height: 1px; }
 
-
 /* Tooltip */
-
-
-
-
-
-
-
-
+#tooltip-container {
+  color: #fff;
+  position: absolute;
+  padding: 20px;
+  max-width: 200px;
+  background-color: rgba(0, 0, 0, .85);
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  border-radius: 12px;
+}
