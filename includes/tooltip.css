@@ -31,3 +31,7 @@ footer { border-top: 1px solid #ddd; margin: 0px; padding: 10px 25px 10px 10px; 
   -moz-border-radius: 12px;
   border-radius: 12px;
 }
+
+.tooltip-html-source {
+  display: none;
+}
