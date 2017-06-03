@@ -14,8 +14,20 @@ $(document).ready(function(){
     var toolTipWidth = $('#tooltip-container').outerWidth();
     var toolTipHeight = $('#tooltip-container').outerHeight();
 
-    $('#tooltip-container').css('left', (e.pageX - 20) + 'px');
-    $('#tooltip-container').css('top', (e.pageY + 20) + 'px')
+    var pageWidth = $('body').width();
+
+    if (e.pageX > pageWidth/2) {
+      $('#tooltip-container').css('left', (e.pageX - toolTipWidth + 20) + 'px');
+    } else {
+      $('#tooltip-container').css('left', (e.pageX - 20) + 'px');
+    }
+
+    if (e.pageY > 100) {
+      $('#tooltip-container').css('top', (e.pageY - (toolTipHeight + 20)) + 'px');
+    } else {
+      $('#tooltip-container').css('top', (e.pageY + 20) + 'px')
+    }
+
   }).mouseout(function(e){
 
   });
